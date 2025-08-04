@@ -1,4 +1,5 @@
-<!DOCTYPE html><html lang="id">
+<!DOCTYPE html>
+<html lang="id">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -26,11 +27,13 @@
       background: #34495e;
       display: flex;
       justify-content: center;
+      flex-wrap: wrap;
     }
     nav a {
       color: white;
       padding: 15px 20px;
       text-decoration: none;
+      transition: background 0.3s;
     }
     nav a:hover {
       background: #2c3e50;
@@ -55,21 +58,35 @@
       border-radius: 6px;
       box-shadow: 0 1px 4px rgba(0,0,0,0.1);
     }
+    footer {
+      background: #2c3e50;
+      color: white;
+      text-align: center;
+      padding: 10px;
+      margin-top: 40px;
+    }
   </style>
 </head>
 <body>
+
   <header>
-    <img src="logo-x1.jpg" alt="Logo Kelas X-1">
+    <img src="logo-x1.jpg" alt="Logo Kelas X-1" loading="lazy">
     <h1>Kelas X-1</h1>
     <p>SMK FORNUS</p>
-  </header>  <nav>
-    <a href="#" onclick="tampilkan('Beranda')">Beranda</a>
-    <a href="#" onclick="tampilkan('Anggota')">Anggota</a>
-    <a href="#" onclick="tampilkan('Jabatan')">Jabatan</a>
-  </nav>  <section id="beranda" class="active">
-    <h2>Selamat Datang Di Website X-1</h2>
-    <p>Website ini berisi informasi mengenai kelas, anggota, dan jabatan kelas X-1.</p>
-  </section>  <section id="anggota">
+  </header>
+
+  <nav>
+    <a href="#" onclick="tampilkan('beranda')">Beranda</a>
+    <a href="#" onclick="tampilkan('anggota')">Anggota</a>
+    <a href="#" onclick="tampilkan('jabatan')">Jabatan</a>
+  </nav>
+
+  <section id="beranda" class="active">
+    <h2>Selamat Datang di Website Kelas X-1</h2>
+    <p>Website ini berisi informasi mengenai kelas X-1 di SMK FORNUS. Kamu bisa melihat daftar anggota kelas, serta struktur dan jabatan masing-masing siswa.</p>
+  </section>
+
+  <section id="anggota">
     <h2>Daftar Anggota Kelas</h2>
     <ul>
       <li>Farrel</li>
@@ -82,20 +99,30 @@
       <li>Baim</li>
       <li>Nanda</li>
     </ul>
-  </section>  <section id="jabatan">
-    <h2>Struktur dan Jabatan</h2>
+  </section>
+
+  <section id="jabatan">
+    <h2>Struktur dan Jabatan Kelas</h2>
     <ul>
       <li>Ketua Kelas: Farrel</li>
       <li>Wakil Ketua: Andrian</li>
       <li>Sekretaris: Aqila & Garnis</li>
       <li>Bendahara: Jazlyn</li>
-      <li>S. Kebersihan: Kai & Bunga</li>
+      <li>Seksi Kebersihan: Kai & Bunga</li>
     </ul>
-  </section>  <script>
+  </section>
+
+  <footer>
+    &copy; 2025 Kelas X-1 | SMK FORNUS
+  </footer>
+
+  <script>
     function tampilkan(id) {
       const sections = document.querySelectorAll('section');
       sections.forEach(sec => sec.classList.remove('active'));
       document.getElementById(id).classList.add('active');
     }
-  </script></body>
+  </script>
+
+</body>
 </html>
