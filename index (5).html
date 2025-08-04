@@ -1,0 +1,101 @@
+<!DOCTYPE html><html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kelas X-1</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f9f9f9;
+      color: #333;
+    }
+    header {
+      background: #2c3e50;
+      color: white;
+      padding: 20px 0;
+      text-align: center;
+    }
+    header img {
+      width: 80px;
+      height: auto;
+      margin-bottom: 10px;
+    }
+    nav {
+      background: #34495e;
+      display: flex;
+      justify-content: center;
+    }
+    nav a {
+      color: white;
+      padding: 15px 20px;
+      text-decoration: none;
+    }
+    nav a:hover {
+      background: #2c3e50;
+    }
+    section {
+      display: none;
+      padding: 20px;
+      max-width: 800px;
+      margin: auto;
+    }
+    section.active {
+      display: block;
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+    li {
+      background: white;
+      padding: 10px 15px;
+      margin: 8px 0;
+      border-radius: 6px;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="logo-x1.jpg" alt="Logo Kelas X-1">
+    <h1>Kelas X-1</h1>
+    <p>SMK FORNUS</p>
+  </header>  <nav>
+    <a href="#" onclick="tampilkan('Beranda')">Beranda</a>
+    <a href="#" onclick="tampilkan('Anggota')">Anggota</a>
+    <a href="#" onclick="tampilkan('Jabatan')">Jabatan</a>
+  </nav>  <section id="beranda" class="active">
+    <h2>Selamat Datang Di Website X-1</h2>
+    <p>Website ini berisi informasi mengenai kelas, anggota, dan jabatan kelas X-1.</p>
+  </section>  <section id="anggota">
+    <h2>Daftar Anggota Kelas</h2>
+    <ul>
+      <li>Farrel</li>
+      <li>Andrian</li>
+      <li>Raihan</li>
+      <li>Habi</li>
+      <li>Erwan</li>
+      <li>Athala</li>
+      <li>Aiman</li>
+      <li>Baim<li>
+      <li>Nanda
+    </ul>
+  </section>  <section id="jabatan">
+    <h2>Struktur dan Jabatan</h2>
+    <ul>
+      <li>Ketua Kelas: Farrel</li>
+      <li>Wakil Ketua: Andrian</li>
+      <li>Sekretaris: Aqila & Garnis</li>
+      <li>Bendahara: Jazlyn</li>
+      <li>S. Kebersihan: Kai & Bunga<lu>
+    </ul>
+  </section>  <script>
+    function tampilkan(id) {
+      const sections = document.querySelectorAll('section');
+      sections.forEach(sec => sec.classList.remove('active'));
+      document.getElementById(id).classList.add('active');
+    }
+  </script></body>
+</html>
